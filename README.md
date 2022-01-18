@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # defi-staking-app-starter
 
 ## To download me simply open up the terminal and run: 
@@ -70,3 +71,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# difi-staking-app
+Difi staking app course
+>>>>>>> f4eee8a73efe0689d58a5ead69022c7f7b128f73
