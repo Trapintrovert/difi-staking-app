@@ -5521,12 +5521,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x7C54De510b7508A3e0FEaeb511ec62a4459301FC",
-      "transactionHash": "0x6d8317c380902571abced766efa8512848d87d22e1e2fb664d0cd64f38239617"
+      "address": "0x3dA7E04AFF0F518Cb9f5847eB192C700B42a2131",
+      "transactionHash": "0x6ba970e1aaaba3e29d4348b505097a4c662b02ffac47c30bd1f5f8e38780e55f"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2022-01-26T03:46:34.730Z",
+  "updatedAt": "2022-01-26T04:15:39.957Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
