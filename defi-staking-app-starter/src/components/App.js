@@ -84,7 +84,33 @@ class App extends Component{
             window.alert('Error! DecentralBank contract not deployed - no detected network!')
         }
 
-    this.setState({loading: false})
+        this.setState({loading: false})
+    }
+
+    // two function one that stakes and one that unstakes
+    // leverage our decentralBank contract - deposit tokens  and unstaking
+    // depositToken transferFrom ...
+    // function approve transaction hash ---
+    // STAKING FUNCTION ?? >> decentralBank.depositTokens(send transactionHash => )
+
+    // stake function
+    stakeToken = (amount) => {
+        this.setState({loading: true})
+        this.state.tether.methods.approve(this.state.decentralBank._address, amount).send({from: this.state.account}).on('transactionHash', (hash) => {
+        this.state.decentralBank.methods.depositToken(amount).send({from: this.state.account}).on('transactionHash', (hash) => {
+            this.setState({loading: false})
+        })
+     })  
+    }
+
+    // unstake function
+    unstakeToken = () => {
+        this.setState({loading: true})
+       
+        this.state.decentralBank.methods.unstakeTokens().send({from: this.state.account}).on('transactionHash', (hash) => {
+            this.setState({loading: false})
+        })
+     
     }
 
     constructor(props){
@@ -111,8 +137,16 @@ class App extends Component{
             LOADING PLEASE... 
             </p> 
             : 
-            content = <Main/>
+            content = 
+            <Main
+                tetherBalance={this.state.tetherBalance}
+                rwdBalance={this.state.rwdBalance}
+                stakingBalance={this.state.stakingBalance}
+                stakeToken={this.stakeToken}
+                unstakeToken={this.unstakeToken}
+            />
         }
+        
 
         
         return(
